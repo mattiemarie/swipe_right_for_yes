@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --pink: rgba(255, 71, 175, 1);
+    --magenta: rgba(214, 45, 138, 1);
+    --red: rgba(212, 47, 54, 1);
+    --cream: rgb(255, 251, 239);
+    --blue: rgba(66, 164, 215, 1);
+    --teal: rgba(53, 190, 183, 1);
+    --green: rgba(177, 193, 54, 1);
+    --dkgreen: rgba(98, 179, 77, 1);
+    --yellow: rgba(237, 191, 36, 1);
+    --purple: rgba(105, 72, 151, 1);
+    --orange: rgba(235, 130, 49, 1);
+    --dark: rgba(26, 19, 51, 1);
+    background-color: var(--cream);
+  }
+
 html {
     margin: 0;
     padding:0;   
@@ -8,3 +24,24 @@ html {
 * {
     font-family: 'Quicksand', sans-serif;
 }
+
+.primary-button {
+    color: var(--cream);
+    text-transform: uppercase;
+    font-size: 15px;
+    background-color: linear-gradient(45deg, #ff47af, #d42f36);
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+}
+
+.primary-button:hover {
+    background: var(--green);
+}
+
+body {
+    text-align: center;
+}
+
+/* Navbar */
+
