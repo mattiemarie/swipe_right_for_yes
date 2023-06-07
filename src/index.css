@@ -16,14 +16,19 @@
     background-color: var(--cream);
   }
 
-html {
+html, body {
     margin: 0;
     padding:0;   
+}
+
+h2 {
+    font-style: italic;
 }
 
 * {
     font-family: 'Quicksand', sans-serif;
 }
+
 
 .primary-button {
     color: var(--cream);
@@ -38,6 +43,24 @@ html {
 .primary-button:hover {
     color: var(--cream);
     box-shadow: -1px 3px 20px var(--magenta);
+    transition: transform 100ms;
+}
+
+.secondary-button {
+    color: var(--magenta);
+    background-color: var(--cream);
+    font-weight: 500px;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: solid 2px var(--cream);
+    margin: 6px;
+}
+
+.secondary-button:hover {
+    color: var(--magenta);
+    box-shadow: -1px 3px 20px var(--cream);
     transition: transform 100ms;
 }
 
@@ -63,6 +86,11 @@ nav .nav-button {
     border: none
 }
 
+nav .nav-button:disabled {
+    color: var(--cream);
+    background-color: grey;   
+}
+
 nav .logo-container {
     width: 170px;
     margin: 15px
@@ -85,14 +113,31 @@ nav .logo-container .logo {
 } */
 
 /* Auth Modal */
-.auth-modal{
-    position: absolute;
+.auth-modal {
+    /* position: absolute; */
     top: 175px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
     max-width: 360px;
-    height: 600px;
-    background-color: white;
+    height: 500px;
+    background-color: var(--magenta);
     border-radius: 10px;
     padding: 40px;
+}
+
+.auth-modal .close-icon {
+    float: right;
+}
+
+.auth-modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-modal input[type=password],
+.auth-modal input[type=email] {
+    padding: 8px;
+    margin: 8px;
+    font-size: 17px;
 }

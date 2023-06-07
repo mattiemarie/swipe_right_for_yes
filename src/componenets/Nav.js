@@ -3,9 +3,11 @@
 // import colorLogo from 'insert file location for color logo'
 
 
-const Nav = ({ minimal, authToken }) => {
+const Nav = ({ minimal, authToken, setShowModal, showModal }) => {
 
-    // const minimal = true
+    const handleClick = () => {
+        setShowModal(true)
+    }
 
 
     return (
@@ -14,7 +16,11 @@ const Nav = ({ minimal, authToken }) => {
                 {/* <img className="logo" src={minimal ? colorLogo : whiteLogo}/> */}
             </div>
 
-            {!authToken && !minimal && <button className="nav-button">Log in</button>}
+            {!authToken && !minimal && <button
+            className="nav-button"
+            onClick={handleClick}
+            disabled = {showModal}
+            >Log in</button>}
         </nav>
     )
 }
