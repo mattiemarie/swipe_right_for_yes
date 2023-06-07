@@ -21,7 +21,7 @@ const Nav = ({ minimal, authToken, setShowModal, showModal, setIsSignUp }) => {
             className="nav-button"
             onClick={handleClick}
             disabled = {showModal}
-            >Log in</button>}
+            >Log In</button>}
         </nav>
     )
 }

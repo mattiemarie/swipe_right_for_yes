@@ -41,7 +41,8 @@ h2 {
     color: var(--cream);
     text-transform: uppercase;
     font-size: 15px;
-    background-color: var(--magenta);
+    font-weight: bolder;
+    background-color: var(--pink);
     padding: 12px 30px;
     border-radius: 30px;
     border: none;
@@ -49,14 +50,14 @@ h2 {
 
 .primary-button:hover {
     color: var(--cream);
-    box-shadow: -1px 3px 20px var(--magenta);
+    box-shadow: -1px 3px 20px var(--pink);
     transition: transform 100ms;
 }
 
 .secondary-button {
-    color: var(--magenta);
+    color: var(--pink);
     background-color: var(--cream);
-    font-weight: 500px;
+    font-weight: bolder;
     font-size: 15px;
     text-transform: uppercase;
     padding: 12px 30px;
@@ -66,7 +67,7 @@ h2 {
 }
 
 .secondary-button:hover {
-    color: var(--magenta);
+    color: var(--pink);
     box-shadow: -1px 3px 20px var(--cream);
     transition: transform 100ms;
 }
@@ -81,8 +82,9 @@ nav {
 
 nav .nav-button {
     color: var(--cream);
-    background-color: var(--magenta);
+    background-color: var(--pink);
     font-size: 20px;
+    font-weight: bolder;
     margin-top: 20px;
     margin-right: 20px;
     padding: 10px 20px;
@@ -93,6 +95,12 @@ nav .nav-button {
 nav .nav-button:disabled {
     color: var(--cream);
     background-color: grey;   
+}
+
+nav .nav-button:hover {
+    color: var(--cream);
+    box-shadow: -1px 3px 20px var(--pink);
+    transition: transform 100ms;
 }
 
 nav .logo-container {
@@ -111,22 +119,29 @@ nav .logo-container .logo {
     position: fixed;
     background: linear-gradient(
         to bottom,
-        rgba(255, 71, 175, .65) 15%,
-        rgba(105, 72, 151, .75) 100%
-    ), url()
+        rgba(251, 103, 187, 0.5) 10%,
+        rgba(247, 75, 164, 0.6) 100%
+    ), url('/src/componenets/images/sample-background.jpg')
+}
+
+.home {
+    margin-top: 30vh;
 }
 
 /* Auth Modal */
 .auth-modal {
-    /* position: absolute; */
-    top: 175px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
     max-width: 360px;
-    height: 450px;
-    background-color: var(--magenta);
+    height: 600px;
+    background-color: var(--pink);
     border-radius: 10px;
+    border: 6px solid var(--magenta);
     padding: 40px;
 }
 
@@ -144,4 +159,6 @@ nav .logo-container .logo {
     padding: 8px;
     margin: 8px;
     font-size: 17px;
+    border-radius: 5px;
+    border: 3px solid var(--magenta)
 }
