@@ -5,6 +5,7 @@ import { useState } from 'react'
 const Home = () => {
 
     const [showModal, setShowModal] = useState(false)
+    const [isSignUp, setIsSignUp] = useState(true)
 
     // Authentication for Log In
     const authToken = false
@@ -13,20 +14,27 @@ const Home = () => {
     const handleClick = () => {
         console.log('clicked')
         setShowModal(true)
+        setIsSignUp(true)
     }
 
     return (
         <div className="overlay">
-            <Nav miniamal={false} authToken={authToken} setShowModal={setShowModal} showModal={showModal}/>
+            <Nav miniamal={false}
+            authToken={authToken}
+            setShowModal={setShowModal}
+            showModal={showModal}
+            setIsSignUp={setIsSignUp}/>
              <div className="home">
-                <h1>Swipe Right</h1>
+                <h1 className="primary-title">Swipe Right</h1>
                 <button className="primary-button" onClick={handleClick}>
                 {authToken ? 'Signout' : 'Create Account'}
 
                 </button>
 
                 {showModal && (
-                    <AuthModal setShowModal={setShowModal}/>
+                    <AuthModal
+                    setShowModal={setShowModal}
+                    isSignUp={isSignUp}/>
                 )}
 
             </div>

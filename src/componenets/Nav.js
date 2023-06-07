@@ -3,10 +3,11 @@
 // import colorLogo from 'insert file location for color logo'
 
 
-const Nav = ({ minimal, authToken, setShowModal, showModal }) => {
+const Nav = ({ minimal, authToken, setShowModal, showModal, setIsSignUp }) => {
 
     const handleClick = () => {
         setShowModal(true)
+        setIsSignUp(false)
     }
 
 

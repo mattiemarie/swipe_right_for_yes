@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const AuthModal = ({ setShowModal }) => {
+const AuthModal = ({ setShowModal, isSignUp }) => {
 
     const [ email, setEmail ] = useState(null)
     const [ password, setPassword ] = useState(null)
@@ -9,7 +9,6 @@ const AuthModal = ({ setShowModal }) => {
 
     console.log(email, password, confirmPassword)
 
-    const isSignUp = true
 
     const handleClick = () => {
         setShowModal(false)
@@ -32,7 +31,7 @@ const AuthModal = ({ setShowModal }) => {
 
     return (
         <div className= "auth-modal">
-            <div className='close-icon'onClick={handleClick}>x</div>
+            <div className='close-icon'onClick={handleClick}>X</div>
             <h2>{isSignUp ? 'CREATE ACCOUNT' : 'Log In'}</h2>
             <p>By clicking Log In, you agree to our terms. Learn how we process your data in our Privacy Policy and Cookie Policy</p>
             <form onSubmit={handleSubmit}>
@@ -52,14 +51,14 @@ const AuthModal = ({ setShowModal }) => {
                     required={true}
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <input
+                {isSignUp && <input
                     type="password"
                     id="password-check"
                     name= "password-check"
                     placeholder="confirm password"
                     required={true}
                     onChange={(e) => setConfirmPassword(e.target.value)}
-                />
+                />}
                 <input className="secondary-button"type="submit"/>
                 <p>{error}</p>
             </form>

@@ -18,7 +18,8 @@
 
 html, body {
     margin: 0;
-    padding:0;   
+    padding:0;
+    text-align: center;
 }
 
 h2 {
@@ -29,6 +30,12 @@ h2 {
     font-family: 'Quicksand', sans-serif;
 }
 
+.primary-title {
+    font-size: 70px;
+    margin-top: auto;
+    margin-bottom: 20px;
+    color: var(--cream);
+}
 
 .primary-button {
     color: var(--cream);
@@ -64,9 +71,6 @@ h2 {
     transition: transform 100ms;
 }
 
-body {
-    text-align: center;
-}
 
 /* Navbar */
 nav {
@@ -101,7 +105,7 @@ nav .logo-container .logo {
 }
 
 /* Home */
-/* .overlay {
+.overlay {
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -109,8 +113,8 @@ nav .logo-container .logo {
         to bottom,
         rgba(255, 71, 175, .65) 15%,
         rgba(105, 72, 151, .75) 100%
-    )
-} */
+    ), url()
+}
 
 /* Auth Modal */
 .auth-modal {
@@ -118,9 +122,9 @@ nav .logo-container .logo {
     top: 175px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 20px;
     max-width: 360px;
-    height: 500px;
+    height: 450px;
     background-color: var(--magenta);
     border-radius: 10px;
     padding: 40px;
